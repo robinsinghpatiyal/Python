@@ -10,12 +10,39 @@ import urllib.request, urllib.parse, urllib.error
 
 from bs4 import BeautifulSoup
 
-url = imput("Enter the url")
+url = input("Enter the url")
 html = urllib.request.urlopen(url).read()
 soup = BeautifulSoup(html, 'html.parser')
 
 # Retrieve all of he anchor tags
 
-tags = soup('a)
+tags = soup('a')
 for tag in tags:
-    print(tag.get('href', None)
+    print(tag.get('href', None))
+    
+    
+    
+    
+    
+
+
+
+import urllib
+from bs4 import BeautifulSoup
+
+url = input("Enter the url")
+
+html = urllib.request.urlopen(url).read()
+soup = BeautifulSoup(html,'html.parser')
+
+tag = soup('span')
+
+count = 0
+sums = 0
+
+for i in tag:
+	x=int(i.text)
+	count = count+1
+	sums = sums + x
+print (count)
+print (sums)
